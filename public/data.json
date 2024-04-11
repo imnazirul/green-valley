@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "estate_title": "Charming Cottage in the Countryside",
+    "segment_name": "Single-family homes",
+    "description": "Escape to the tranquility of the countryside in this charming cottage, featuring rustic charm and picturesque surroundings.",
+    "price": "$400,000",
+    "status": "sale",
+    "area": "2000 sq ft",
+    "location": "Cotswolds, England",
+    "facilities": ["garden", "fireplace", "country kitchen"],
+    "image": "https://i.ibb.co/Z6gXSTY/img-1.jpg",
+    "contact_info": {
+      "agent_name": "Emma Thompson",
+      "agent_contact": "+44 1234 567890"
+    }
+  },
+  {
+    "id": 2,
+    "estate_title": "Modern Loft in Historic Downtown",
+    "segment_name": "Apartments",
+    "description": "Experience urban living at its finest in this modern loft apartment located in a historic downtown district, offering luxury and convenience.",
+    "price": "$700,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Old Montreal, Canada",
+    "facilities": ["exposed brick walls", "high ceilings", "rooftop terrace"],
+    "image": "https://i.ibb.co/7n66DkT/img-2.jpg",
+    "contact_info": {
+      "agent_name": "Alexandre Dupont",
+      "agent_contact": "+1 (514) 234-5678"
+    }
+  },
+  {
+    "id": 3,
+    "estate_title": "Family-Friendly Townhouse with Playground",
+    "segment_name": "Townhouses",
+    "description": "Perfect for families, this townhouse offers spacious living areas and a dedicated playground, creating an ideal environment for children.",
+    "price": "$600,000",
+    "status": "sale",
+    "area": "2200 sq ft",
+    "location": "Sunnyvale, California",
+    "facilities": ["playground", "community pool", "attached garage"],
+    "image": "https://i.ibb.co/L5yx7Kj/ing-3.jpg",
+    "contact_info": {
+      "agent_name": "Jennifer Lee",
+      "agent_contact": "+1 (408) 345-6789"
+    }
+  },
+  {
+    "id": 4,
+    "estate_title": "Prime Student Housing near University Campus",
+    "segment_name": "Student Housing",
+    "description": "Ideal for students, this housing complex offers convenient access to campus and modern amenities for comfortable student living.",
+    "price": "$1,200/month",
+    "status": "rent",
+    "area": "900 sq ft",
+    "location": "Cambridge, Massachusetts",
+    "facilities": ["study lounge", "fitness center", "laundry facilities"],
+    "image": "https://i.ibb.co/JFr4WvQ/img-4.jpg",
+    "contact_info": {
+      "agent_name": "David Wilson",
+      "agent_contact": "+1 (617) 456-7890"
+    }
+  },
+  {
+    "id": 5,
+    "estate_title": "Retirement Villa in Sun-kissed Community",
+    "segment_name": "Senior Living Communities",
+    "description": "Enjoy your golden years in this retirement villa situated in a sun-kissed community, offering resort-style amenities and peaceful surroundings.",
+    "price": "$800,000",
+    "status": "sale",
+    "area": "2500 sq ft",
+    "location": "Scottsdale, Arizona",
+    "facilities": ["clubhouse", "swimming pool", "golf course"],
+    "image": "https://i.ibb.co/Pjb0SB8/img-5.jpg",
+    "contact_info": {
+      "agent_name": "Sophia Davis",
+      "agent_contact": "+1 (480) 567-8901"
+    }
+  },
+  {
+    "id": 6,
+    "estate_title": "Luxury Beachfront Condo with Panoramic Views",
+    "segment_name": "Vacation Rentals",
+    "description": "Indulge in luxury beachfront living in this stunning condo offering panoramic views of the ocean and access to resort-style amenities.",
+    "price": "$500/night",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Miami Beach, Florida",
+    "facilities": ["beach access", "poolside cabanas", "fitness center"],
+    "image": "https://i.ibb.co/80Cb4MK/img-6.png",
+    "contact_info": {
+      "agent_name": "Michael Brown",
+      "agent_contact": "+1 (305) 678-9012"
+    }
+  },
+  {
+    "id": 7,
+    "estate_title": "Mountain Retreat Cabin with Scenic Views",
+    "segment_name": "Vacation Rentals",
+    "description": "Escape to the mountains in this cozy cabin retreat, offering scenic views and proximity to outdoor adventures.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "Lake Tahoe, Nevada",
+    "facilities": ["wraparound deck", "fire pit", "hiking trails"],
+    "image": "https://i.ibb.co/98Cqwkz/img-7.jpg",
+    "contact_info": {
+      "agent_name": "Sarah Johnson",
+      "agent_contact": "+1 (775) 890-1234"
+    }
+  },
+  {
+    "id": 8,
+    "estate_title": "Historic Mansion in Prestigious Neighborhood",
+    "segment_name": "Luxury Homes",
+    "description": "Own a piece of history with this magnificent historic mansion located in a prestigious neighborhood, boasting timeless elegance and grandeur.",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "10000 sq ft",
+    "location": "Upper East Side, New York",
+    "facilities": ["formal gardens", "ballroom", "wine cellar"],
+    "image": "https://i.ibb.co/Z2Gxycs/img-8.jpg",
+    "contact_info": {
+      "agent_name": "William Johnson",
+      "agent_contact": "+1 (212) 345-6789"
+    }
+  },
+  {
+    "id": 9,
+    "estate_title": "Exclusive Penthouse with Skyline Views",
+    "segment_name": "Luxury Homes",
+    "description": "Experience luxury living at its finest in this exclusive penthouse offering breathtaking skyline views and unparalleled elegance.",
+    "price": "$3,500,000",
+    "status": "sale",
+    "area": "3000 sq ft",
+    "location": "Beverly Hills, California",
+    "facilities": ["private elevator", "infinity pool", "home automation"],
+    "image": "https://i.ibb.co/vX0RpS6/ing-9.jpg",
+    "contact_info": {
+      "agent_name": "James Smith",
+      "agent_contact": "+1 (310) 456-7890"
+    }
+  }
+]

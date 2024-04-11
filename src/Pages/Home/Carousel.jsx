@@ -9,7 +9,7 @@ const Carousel = () => {
       <div className="carousel w-full rounded-xl h-[500px]">
         <div id="slide1" className="carousel-item relative w-full">
           <div
-            className="hero 3B7197"
+            className="hero "
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/nmqFyjk/kelvin-zyteng-LMq-r-Tlu-Kf-Q-unspla-1.jpg)",
@@ -52,7 +52,7 @@ const Carousel = () => {
         </div>
         <div id="slide2" className="carousel-item relative w-full">
           <div
-            className="hero 3B7197"
+            className="hero "
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
@@ -138,7 +138,7 @@ const Carousel = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
           <div
-            className="hero 3B7197"
+            className="hero "
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/Mgjkj4W/ronnie-george-z11gb-Bo13ro-unspla.jpg)",

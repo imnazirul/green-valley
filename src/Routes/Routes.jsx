@@ -5,6 +5,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PropertyDetails from "../Shared/PropertyDetails/PropertyDetails";
 import ErrorEl from "../Pages/ErrorEL/ErrorEl";
+import UserProfile from "../Pages/UserProfile/UserProfile";
+import UpdateProfile from "../Pages/UpdataProfile/UpdateProfile";
+import Slider from "../Pages/Slider/Slider";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,18 @@ const router = createBrowserRouter([
         path: "/property_details/:id",
         element: <PropertyDetails></PropertyDetails>,
         loader: () => fetch("../data.json"),
+      },
+      {
+        path: "/user_profile",
+        element: <UserProfile></UserProfile>,
+      },
+      {
+        path: "/update_Profile",
+        element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/slider",
+        element: <Slider></Slider>,
       },
     ],
   },

@@ -29,6 +29,11 @@ const Navbar = () => {
           Update Profile
         </NavLink>
       </span>
+      <span className="hover:text-[#00AEFF]">
+        <NavLink className="px-4 py-2 rounded-lg" to="/blogs">
+          Blogs
+        </NavLink>
+      </span>
     </>
   );
 
@@ -59,7 +64,7 @@ const Navbar = () => {
             {navLinks}
           </div>
         </div>
-        <a className=" btn-ghost  flex gap-0 text-3xl font-bold text-[#3B7197]">
+        <a className=" btn-ghost font-jost flex gap-0 text-3xl font-bold text-[#0054A5]">
           Green Valley
         </a>
       </div>

@@ -7,6 +7,8 @@ import PropertyDetails from "../Shared/PropertyDetails/PropertyDetails";
 import ErrorEl from "../Pages/ErrorEL/ErrorEl";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import UpdateProfile from "../Pages/UpdataProfile/UpdateProfile";
+import Blogs from "../Pages/Blogs/Blogs";
+import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./../data.json"),
+        loader: () => fetch("./../../public/data.json"),
       },
       {
         path: "/login",
@@ -39,6 +41,16 @@ const router = createBrowserRouter([
       {
         path: "/update_Profile",
         element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs></Blogs>,
+        loader: () => fetch("../../public/blogs.json"),
+      },
+      {
+        path: "/blogs/blog_details/:id",
+        element: <BlogDetails></BlogDetails>,
+        loader: () => fetch("../../public/blogs.json"),
       },
     ],
   },

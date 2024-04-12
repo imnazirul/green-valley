@@ -1,15 +1,37 @@
+import { Swiper, SwiperSlide } from "swiper/react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 AOS.init();
 
-const Carousel = () => {
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+const Slider = () => {
   return (
     <>
-      <div className="carousel w-full rounded-xl h-[500px]">
-        <div id="slide1" className="carousel-item relative w-full">
+      <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
           <div
-            className="hero "
+            className="hero h-[500px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/nmqFyjk/kelvin-zyteng-LMq-r-Tlu-Kf-Q-unspla-1.jpg)",
@@ -40,19 +62,10 @@ const Carousel = () => {
               </div>
             </div>
           </div>
-
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full">
+        </SwiperSlide>
+        <SwiperSlide>
           <div
-            className="hero "
+            className="hero h-[500px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
@@ -83,19 +96,10 @@ const Carousel = () => {
               </div>
             </div>
           </div>
-
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide3" className="carousel-item relative w-full">
+        </SwiperSlide>
+        <SwiperSlide>
           <div
-            className="hero "
+            className="hero h-[500px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/HPxHV81/frans-ruiter-x1-Py2n-XR-wc-unsplas.jpg)",
@@ -126,19 +130,11 @@ const Carousel = () => {
               </div>
             </div>
           </div>
-
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide4" className="carousel-item relative w-full">
+        </SwiperSlide>
+        <SwiperSlide>
+          {" "}
           <div
-            className="hero "
+            className="hero h-[500px]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/Mgjkj4W/ronnie-george-z11gb-Bo13ro-unspla.jpg)",
@@ -169,19 +165,45 @@ const Carousel = () => {
               </div>
             </div>
           </div>
+        </SwiperSlide>
 
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
+        <SwiperSlide>
+          <div
+            className="hero h-[500px]"
+            style={{
+              backgroundImage:
+                "url(https://i.ibb.co/Xy4VcTc/marvin-meyer-8-CDu-HXff3zo-unsplas.jpg)",
+            }}
+          >
+            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-content text-center text-neutral-content">
+              <div className="max-w-xl">
+                <h1
+                  className="mb-5 text-4xl font-bold"
+                  data-aos="fade-down"
+                  data-aos-duration="1000"
+                >
+                  Luxury Beachfront Condo Paradise
+                </h1>
+                <p className="mb-5" data-aos="fade-up" data-aos-duration="1000">
+                  Indulge in coastal luxury with our exquisite beachfront
+                  condos. Breathtaking panoramic views await, offering the
+                  epitome of seaside living and relaxation.
+                </p>
+                <button
+                  className="btn bg-[#3B7197] border-0 text-white hover:text-black"
+                  data-aos="zoom-in-down"
+                  data-aos-delay="1000"
+                >
+                  See Details
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </SwiperSlide>
+      </Swiper>
     </>
   );
 };
 
-export default Carousel;
+export default Slider;

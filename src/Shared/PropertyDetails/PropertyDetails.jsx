@@ -34,9 +34,9 @@ const PropertyDetails = () => {
   console.log(contact_info);
 
   return (
-    <div>
+    <div className="mb-5 lg:mb-10">
       <Helmet>
-        <title>Details | Green Vally</title>
+        <title>Details | Green Valley</title>
       </Helmet>
       <div className="rounded-xl h-[500px] overflow-hidden mb-3">
         <img className=" h-full mx-auto rounded-xl " src={image} alt="" />
@@ -55,10 +55,11 @@ const PropertyDetails = () => {
             <MdMoreVert></MdMoreVert>
           </div>
         </div>
+        <hr />
         <div className="flex justify-between space-y-3">
-          <div>
-            <h3 className="text-3xl font-jost text-black">{price}</h3>
-            <h1 className="text-4xl font-jost text-black">{estate_title}</h1>
+          <div className="space-y-2">
+            <h3 className="text-2xl font-jost text-black">{price}</h3>
+            <h1 className="text-3xl font-jost text-black">{estate_title}</h1>
             <p className="text-xl font-roboto">{location}</p>
           </div>
 
@@ -77,6 +78,7 @@ const PropertyDetails = () => {
             </div>
           </div>
         </div>
+        <hr />
         <div>
           <div className="flex justify-between items-center">
             {" "}
@@ -102,8 +104,12 @@ const PropertyDetails = () => {
             ))}
           </ul>
         </div>
+        <hr />
         <div>
-          <p className="text-xl">{long_description}</p>
+          <p className="text-xl">
+            <span className="text-[#3B7197]">More Details: </span>
+            {long_description}
+          </p>
         </div>
       </div>
     </div>

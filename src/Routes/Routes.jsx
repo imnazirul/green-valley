@@ -7,7 +7,6 @@ import PropertyDetails from "../Shared/PropertyDetails/PropertyDetails";
 import ErrorEl from "../Pages/ErrorEL/ErrorEl";
 import UserProfile from "../Pages/UserProfile/UserProfile";
 import UpdateProfile from "../Pages/UpdataProfile/UpdateProfile";
-import Slider from "../Pages/Slider/Slider";
 
 const router = createBrowserRouter([
   {
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
       {
         path: "/update_Profile",
         element: <UpdateProfile></UpdateProfile>,
-      },
-      {
-        path: "/slider",
-        element: <Slider></Slider>,
       },
     ],
   },

@@ -1,8 +1,10 @@
 import { MdAreaChart } from "react-icons/md";
 import { MdLocationOn } from "react-icons/md";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const PropertyCard = ({ data }) => {
+  // console.log(data);
   const {
     status,
     segment_name,
@@ -12,6 +14,7 @@ const PropertyCard = ({ data }) => {
     location,
     image,
     description,
+    id,
   } = data;
 
   return (
@@ -49,9 +52,12 @@ const PropertyCard = ({ data }) => {
           </p>
         </div>
         <div className="card-actions justify-end">
-          <button className="btn bg-[#3B7197] text-white hover:text-black">
+          <Link
+            to={`/property_details/${id}`}
+            className="btn bg-[#3B7197] text-white hover:text-black"
+          >
             View Property
-          </button>
+          </Link>
         </div>
       </div>
     </div>

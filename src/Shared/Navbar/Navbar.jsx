@@ -69,7 +69,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        <Link className="bg-green-1000 btn bg-[#3B7197] text-[#FCFCFC] font-bold flex items-center gap-1 hover:bg-[#3B7197]">
+        <Link
+          to="/login"
+          className="bg-green-1000 btn bg-[#3B7197] text-[#FCFCFC] font-bold flex items-center gap-1 hover:bg-[#3B7197]"
+        >
           <FiLogIn></FiLogIn>Sign In
         </Link>
       </div>

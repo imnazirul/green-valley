@@ -1,12 +1,16 @@
 import Carousel from "./Carousel";
 import { useLoaderData } from "react-router-dom";
 import PropertyCard from "./PropertyCard";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const data = useLoaderData();
   console.log(data);
   return (
     <div>
+      <Helmet>
+        <title>Home | Green Vally</title>
+      </Helmet>
       <Carousel></Carousel>
       <div className="mt-5 lg:mt-10">
         <h1
@@ -22,10 +26,7 @@ const Home = () => {
           its a lifestyle waiting to be embraced.
         </p>
 
-        <div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          data-aos="fade-up"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.map((singleData, index) => (
             <PropertyCard key={index} data={singleData}></PropertyCard>
           ))}

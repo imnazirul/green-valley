@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import PropertyCard from "./PropertyCard";
 import { Helmet } from "react-helmet-async";
 import Reviews from "./Reviews";
+import TopProperty from "./TopProperty";
 
 const Home = () => {
   const data = useLoaderData();
@@ -47,6 +48,9 @@ const Home = () => {
         <div className="mb-5 lg:mb-10">
           <Reviews></Reviews>
         </div>
+      </div>
+      <div className="mb-5 lg:mb-10">
+        <TopProperty></TopProperty>
       </div>
     </div>
   );

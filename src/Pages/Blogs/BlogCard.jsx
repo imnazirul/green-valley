@@ -4,7 +4,7 @@ const BlogCard = ({ blog }) => {
   const { author, category, date, description, image, title, id } = blog;
 
   return (
-    <div className="card  bg-base-100 shadow-xl flex justify-between  h-full">
+    <div className="card border bg-base-100 shadow-xl flex justify-between  h-full">
       <div className="h-[250px] rounded-t-xl overflow-hidden">
         <img className="h-full w-full" src={image} alt="Shoes" />
       </div>

@@ -107,7 +107,7 @@ const PropertyDetails = () => {
         <hr />
         <div>
           <p className="text-xl">
-            <span className="text-[#3B7197]">More Details: </span>
+            <span className="text-[#3B7197] font-semibold">More Details: </span>
             {long_description}
           </p>
         </div>

@@ -16,6 +16,9 @@ export default {
         btn: {
           1: "#3B7197",
         },
+        darkBlue: {
+          1: "#0054A5",
+        },
       },
     },
   },

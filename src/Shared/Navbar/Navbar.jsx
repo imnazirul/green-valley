@@ -1,7 +1,23 @@
 import { Link, NavLink } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 import "./Navbar.css";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user);
+
+  const handleSignOut = () => {
+    logOut().then().catch();
+  };
+
+  const isImgLink = (url) => {
+    if (typeof url !== "string") return false;
+    return (
+      url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim) != null
+    );
+  };
+
   const navLinks = (
     <>
       <span className="hover:text-[#00AEFF] ">
@@ -74,12 +90,42 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        <Link
-          to="/login"
-          className="bg-green-1000 btn bg-[#3B7197] text-[#FCFCFC] font-bold flex items-center gap-1 hover:bg-[#3B7197]"
-        >
-          <FiLogIn></FiLogIn>Sign In
-        </Link>
+        {user ? (
+          <div className="flex items-center gap-1">
+            <Link to="/user_profile">
+              {" "}
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={
+                      isImgLink(user.photoURL)
+                        ? user.photoURL
+                        : "https://i.ibb.co/x3qtSTk/istockphoto-1300845620-612x612-2.jpg"
+                    }
+                  />
+                </div>
+              </div>
+            </Link>
+            <button
+              onClick={handleSignOut}
+              className="bg-green-1000 btn bg-[#3B7197] text-[#FCFCFC] font-bold flex items-center  gap-1 hover:bg-[#3B7197]"
+            >
+              Sign Out
+            </button>
+          </div>
+        ) : (
+          <Link
+            to="/login"
+            className="bg-green-1000 btn bg-[#3B7197] text-[#FCFCFC] font-bold flex items-center gap-1 hover:bg-[#3B7197]"
+          >
+            <FiLogIn></FiLogIn>Sign In
+          </Link>
+        )}
       </div>
     </div>
   );

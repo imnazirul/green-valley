@@ -4,10 +4,11 @@ import PropertyCard from "./PropertyCard";
 import { Helmet } from "react-helmet-async";
 import Reviews from "./Reviews";
 import TopProperty from "./TopProperty";
+import Contact from "./Contact/Contact";
 
 const Home = () => {
   const data = useLoaderData();
-  console.log(data);
+
   return (
     <div>
       <Helmet>
@@ -34,9 +35,13 @@ const Home = () => {
           ))}
         </div>
       </div>
+      {/* top property list */}
+      <div className="mb-5 lg:mb-10">
+        <TopProperty></TopProperty>
+      </div>
 
       {/* Our Featured Agents */}
-      <div>
+      <div className="mb-5 lg:mb-10">
         <h1 className="text-4xl text-center font-semibold font-jost">
           Our Featured Agents
         </h1>
@@ -45,12 +50,13 @@ const Home = () => {
           markets. With a keen eye for detail and dedication, they are ready to
           guide you through your real estate journey with confidence.
         </p>
-        <div className="mb-5 lg:mb-10">
+        <div>
           <Reviews></Reviews>
         </div>
       </div>
-      <div className="mb-5 lg:mb-10">
-        <TopProperty></TopProperty>
+
+      <div className="mt-20 lg:mb-10">
+        <Contact></Contact>
       </div>
     </div>
   );

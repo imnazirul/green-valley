@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/property_details/:id",
         element: <PropertyDetails></PropertyDetails>,
-        loader: () => fetch("../data.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/user_profile",
@@ -45,12 +45,12 @@ const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
-        loader: () => fetch("../../public/blogs.json"),
+        loader: () => fetch("/blogs.json"),
       },
       {
         path: "/blogs/blog_details/:id",
         element: <BlogDetails></BlogDetails>,
-        loader: () => fetch("../../public/blogs.json"),
+        loader: () => fetch("/blogs.json"),
       },
     ],
   },

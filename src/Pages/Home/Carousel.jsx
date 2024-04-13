@@ -37,7 +37,7 @@ const Slider = () => {
                 "url(https://i.ibb.co/nmqFyjk/kelvin-zyteng-LMq-r-Tlu-Kf-Q-unspla-1.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-xl">
                 <h1
@@ -71,7 +71,7 @@ const Slider = () => {
                 "url(https://i.ibb.co/yhWVPRD/owen-lystrup-bo-Lgi-M0qwkg-unsplas.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-xl">
                 <h1
@@ -105,7 +105,7 @@ const Slider = () => {
                 "url(https://i.ibb.co/HPxHV81/frans-ruiter-x1-Py2n-XR-wc-unsplas.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-xl">
                 <h1
@@ -140,7 +140,7 @@ const Slider = () => {
                 "url(https://i.ibb.co/Mgjkj4W/ronnie-george-z11gb-Bo13ro-unspla.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-xl">
                 <h1
@@ -175,7 +175,7 @@ const Slider = () => {
                 "url(https://i.ibb.co/Xy4VcTc/marvin-meyer-8-CDu-HXff3zo-unsplas.jpg)",
             }}
           >
-            <div className="hero-overlay bg-opacity-60"></div>
+            <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="max-w-xl">
                 <h1

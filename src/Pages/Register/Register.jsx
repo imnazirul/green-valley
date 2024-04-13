@@ -1,18 +1,38 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { IoIosEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const {
     register,
     handleSubmit,
-
     // watch,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+
   const handleRegister = (formData) => {
-    console.log(formData);
+    const { email, fullName, password, photoUrl } = formData;
+
+    createUser(email, password)
+      .then((result) => {
+        updateUserProfile(fullName, photoUrl);
+        console.log(result.user);
+        toast.success("Registration Completed.");
+      })
+      .catch((err) => console.log(err.message));
   };
 
   return (
@@ -20,11 +40,13 @@ const Register = () => {
       <Helmet>
         <title>Sign Up | Green Valley</title>
       </Helmet>
+
+      <ToastContainer></ToastContainer>
       <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1 ">
         Register Now !
       </h1>
       <div className="hero py-10 ">
-        <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
           <form onSubmit={handleSubmit(handleRegister)} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -109,7 +131,7 @@ const Register = () => {
               )}
             </div>
 
-            <div className="form-control">
+            <div className="form-control relative">
               <label className="label">
                 <span className="label-text text-lg">Password</span>
               </label>
@@ -142,10 +164,20 @@ const Register = () => {
                     },
                   },
                 })}
-                type="password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 className="input input-bordered"
               />
+              <span
+                onClick={handleShowPassword}
+                className="text-2xl absolute right-4 top-[61%]"
+              >
+                {showPassword ? (
+                  <IoIosEye></IoIosEye>
+                ) : (
+                  <IoIosEyeOff></IoIosEyeOff>
+                )}
+              </span>
             </div>
             <div>
               {errors.password && (

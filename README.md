@@ -1,12 +1,20 @@
-# React + Vite
+# Green Valley
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site URL:** [www.greenvalley.com](https://nazirul-assignment8.netlify.app)
 
-Currently, two official plugins are available:
+## Features and Characteristics:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User-friendly Interface**: Our website offers an intuitive and easy-to-navigate interface, making it simple for users to explore and find their favorite books.
 
-<h1>swipper slider
-aos animation
-</h1>
+- **Readlist and Wishlist**: Allow users to add their favorite books to readlist and create wishlists for future reading, enhancing their browsing experience.
+
+- **Advance Filter System**: Provide users with advanced filters, allowing them to narrow down their book based on criteria such as rating, publish date, and book pages.
+
+- **Author Biography**: We boast a vast database of books across various Authors and their biography, ensuring that users can find and know about all book authors.
+
+- **New Releases**: We always give update about new book releases so that our users can get the newest activity they want.
+
+- **Responsive Design**: Our website is optimized for various devices, including desktops, smartphones and ensuring a seamless experience regardless of the device used.
+
+## npm Package Used:
+- `openai`

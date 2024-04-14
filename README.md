@@ -19,6 +19,6 @@
 ## NPM Package Used:
 - `AOS Package`
 - `React-leaflet`
-- `React Hook form,`
+- `React Hook form`
 - `Swiper slider
 `

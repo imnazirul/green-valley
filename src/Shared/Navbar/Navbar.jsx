@@ -11,13 +11,6 @@ const Navbar = () => {
     logOut().then().catch();
   };
 
-  const isImgLink = (url) => {
-    if (typeof url !== "string") return false;
-    return (
-      url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim) != null
-    );
-  };
-
   const navLinks = (
     <>
       <span className="hover:text-[#00AEFF] ">
@@ -57,7 +50,7 @@ const Navbar = () => {
     <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className=" btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -103,7 +96,7 @@ const Navbar = () => {
                   <img
                     alt="Tailwind CSS Navbar component"
                     src={
-                      isImgLink(user.photoURL)
+                      user.photoURL
                         ? user.photoURL
                         : "https://i.ibb.co/x3qtSTk/istockphoto-1300845620-612x612-2.jpg"
                     }

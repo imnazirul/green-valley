@@ -9,6 +9,7 @@ import UserProfile from "../Pages/UserProfile/UserProfile";
 import UpdateProfile from "../Pages/UpdataProfile/UpdateProfile";
 import Blogs from "../Pages/Blogs/Blogs";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("./../../public/data.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/login",
@@ -36,20 +37,36 @@ const router = createBrowserRouter([
       },
       {
         path: "/user_profile",
-        element: <UserProfile></UserProfile>,
+        element: (
+          <PrivateRoute>
+            <UserProfile></UserProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update_Profile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blogs",
-        element: <Blogs></Blogs>,
+        element: (
+          <PrivateRoute>
+            <Blogs></Blogs>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/blogs.json"),
       },
       {
         path: "/blogs/blog_details/:id",
-        element: <BlogDetails></BlogDetails>,
+        element: (
+          <PrivateRoute>
+            <BlogDetails></BlogDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/blogs.json"),
       },
     ],

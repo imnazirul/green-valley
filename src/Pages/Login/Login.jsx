@@ -13,7 +13,7 @@ import GithubButton from "react-github-login-button";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { signIn } = useContext(AuthContext);
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -32,6 +32,14 @@ const Login = () => {
       .then((result) => console.log(result.user))
       .catch(() => {
         toast.error("Invalid Email or Password");
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((result) => console.log(result.user))
+      .catch(() => {
+        toast.error("An Unknown Error Occurred!");
       });
   };
 
@@ -119,11 +127,7 @@ const Login = () => {
           </form>
           <div className="flex flex-col gap-2 justify-center  items-center mb-3">
             {" "}
-            <GoogleButton
-              onClick={() => {
-                console.log("Google button clicked");
-              }}
-            />
+            <GoogleButton onClick={handleGoogleLogin} />
             <GithubButton
               onClick={() => {
                 console.log("Github button clicked");

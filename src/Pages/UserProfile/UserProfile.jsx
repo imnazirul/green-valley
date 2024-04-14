@@ -3,20 +3,14 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { MdEmail } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
 import { FaPhoneSquareAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const UserProfile = () => {
   const { user, loading } = useContext(AuthContext);
 
-  const isImgLink = (url) => {
-    if (typeof url !== "string") return false;
-    return (
-      url.match(/^http[^\?]*.(jpg|jpeg|gif|png|tiff|bmp)(\?(.*))?$/gim) != null
-    );
-  };
-
   if (loading) {
     return (
-      <div className="flex min-h-screen justify-center ite'">
+      <div className="flex min-h-screen justify-center item center">
         <span className="loading loading-dots loading-lg"></span>
         <span className="loading loading-dots loading-lg"></span>
       </div>
@@ -33,7 +27,6 @@ const UserProfile = () => {
     displayName,
   } = user;
 
-  console.log(metadata);
   const { creationTime, lastSignInTime } = metadata;
   return (
     <div className=" mx-auto mb-5">
@@ -42,7 +35,7 @@ const UserProfile = () => {
           <div className="flex justify-center">
             <img
               src={
-                isImgLink(photoURL)
+                photoURL
                   ? photoURL
                   : "https://i.ibb.co/x3qtSTk/istockphoto-1300845620-612x612-2.jpg"
               }
@@ -56,16 +49,17 @@ const UserProfile = () => {
               {displayName ? displayName : "Unknown"}
             </h1>
             <p className="text-center text-sm   my-2 font-bold">UID: {uid}</p>
+            <p className="text-center text-lg   my-2 font-bold">
+              Email: {emailVerified ? "Verified" : "Not Verified"}
+            </p>
 
             <div className="my-5 px-6">
-              <a
-                href="#"
+              <Link
+                to="/update_profile"
                 className="text-gray-200 block rounded-lg text-center font-medium leading-6 px-6 py-3 bg-gray-900 hover:bg-black hover:text-white"
               >
-                <span className="font-bold">
-                  {emailVerified ? "Verified" : "Not Verified"}
-                </span>
-              </a>
+                <span className="font-bold">Edit Profile</span>
+              </Link>
             </div>
             <div className="flex justify-between items-center my-5 px-6 text-lg font-semibold">
               <div>
@@ -77,7 +71,7 @@ const UserProfile = () => {
             </div>
 
             <div className="w-full">
-              <h3 className="font-medium text-gray-900 text-left px-6">
+              <h3 className="font-medium text-gray-900 text-left px-6 text-bold text-2xl font-jost">
                 Details
               </h3>
               <div className="mt-5 w-full flex flex-col items-center overflow-hidden text-sm">

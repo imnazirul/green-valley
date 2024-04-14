@@ -1,0 +1,9 @@
+.Toastify__toast {
+  background: #3b7197;
+  border-radius: 10px;
+  color: white;
+}
+.Toastify__progress-bar--success {
+  color: white;
+  background: white;
+}

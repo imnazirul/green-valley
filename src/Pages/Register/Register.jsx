@@ -28,7 +28,9 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        updateUserProfile(fullName, photoUrl);
+        updateUserProfile(fullName, photoUrl)
+          .then(() => {})
+          .catch(() => {});
         console.log(result.user);
         toast.success("Registration Completed.");
       })

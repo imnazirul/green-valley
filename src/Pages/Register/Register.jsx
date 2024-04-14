@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
@@ -9,7 +9,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
+  const { createUser, updateRegisterProfile, setReload, reload } =
+    useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -28,11 +29,14 @@ const Register = () => {
 
     createUser(email, password)
       .then((result) => {
-        updateUserProfile(fullName, photoUrl)
-          .then(() => {})
-          .catch(() => {});
-        console.log(result.user);
-        toast.success("Registration Completed.");
+        updateRegisterProfile(fullName, photoUrl)
+          .then(() => {
+            setReload(!reload);
+          })
+          .catch((err) => console.log(err));
+        toast.success("Registration Completed.", {
+          position: "top-center",
+        });
       })
       .catch((err) => console.log(err.message));
   };

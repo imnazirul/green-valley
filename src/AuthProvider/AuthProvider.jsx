@@ -1,4 +1,5 @@
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -11,16 +12,27 @@ import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
 export const AuthContext = createContext(null);
+
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [reload, setReload] = useState(false);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const updateRegisterProfile = (displayName, photoURL) => {
+    setLoading(false);
+    return updateProfile(auth.currentUser, {
+      displayName,
+      photoURL,
+    });
+  };
   const updateUserProfile = (displayName, photoURL) => {
     setLoading(true);
     return updateProfile(auth.currentUser, {
@@ -34,8 +46,24 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  const logOut = () => {
+    setLoading(true);
+    return signOut(auth);
+  };
+
+  const signInWithGoogle = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
+
+  const signInWithGithub = () => {
+    setLoading(true);
+    return signInWithPopup(auth, githubProvider);
+  };
+
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log("auth state changed on", currentUser);
       setUser(currentUser);
       setLoading(false);
     });
@@ -43,26 +71,21 @@ const AuthProvider = ({ children }) => {
     return () => {
       unSubscribe();
     };
-  }, []);
-
-  const logOut = () => {
-    setLoading(true);
-    return signOut(auth);
-  };
-
-  const signInWithGoogle = () => {
-    return signInWithPopup(auth, googleProvider);
-  };
+  }, [reload]);
 
   const authInfo = {
     user,
     createUser,
     updateUserProfile,
+    updateRegisterProfile,
     signIn,
     logOut,
     loading,
     setLoading,
     signInWithGoogle,
+    signInWithGithub,
+    setReload,
+    reload,
   };
   return (
     <>

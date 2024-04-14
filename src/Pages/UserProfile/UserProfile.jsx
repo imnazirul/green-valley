@@ -6,16 +6,8 @@ import { FaPhoneSquareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const UserProfile = () => {
-  const { user, loading } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
-  if (loading) {
-    return (
-      <div className="flex min-h-screen justify-center item center">
-        <span className="loading loading-dots loading-lg"></span>
-        <span className="loading loading-dots loading-lg"></span>
-      </div>
-    );
-  }
   const {
     email,
     emailVerified,
@@ -81,7 +73,9 @@ const UserProfile = () => {
                 >
                   <MdEmail className="text-2xl"></MdEmail>
                   Email:
-                  <span className="text-xl ">{email}</span>
+                  <span className="text-xl ">
+                    {email ? email : "Not Available"}
+                  </span>
                 </div>
 
                 <a className="w-full flex gap-1 items-center border-t border-gray-100  py-4 pl-6 pr-3   hover:bg-gray-100 transition duration-150 text-white  font-bold text-xl    hover:text-gray-800">

@@ -5,6 +5,8 @@ import { Navigate } from "react-router-dom";
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 
+  console.log(user, loading);
+
   if (loading) {
     return (
       <div className="flex min-h-screen justify-center ite'">

@@ -4,8 +4,7 @@ import "./Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
-  console.log(user);
+  const { user, logOut, loading } = useContext(AuthContext);
 
   const handleSignOut = () => {
     logOut().then().catch();
@@ -18,31 +17,41 @@ const Navbar = () => {
           Home
         </NavLink>
       </span>
-      <span className="hover:text-[#00AEFF]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/login">
-          Login
-        </NavLink>
-      </span>
-      <span className="hover:text-[#00AEFF]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/register">
-          Register
-        </NavLink>
-      </span>
-      <span className="hover:text-[#00AEFF]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/user_profile">
-          User Profile
-        </NavLink>
-      </span>
-      <span className="hover:text-[#00AEFF]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/update_profile">
-          Update Profile
-        </NavLink>
-      </span>
-      <span className="hover:text-[#00AEFF]">
-        <NavLink className="px-4 py-2 rounded-lg" to="/blogs">
-          Blogs
-        </NavLink>
-      </span>
+      {!user && (
+        <>
+          {" "}
+          <span className="hover:text-[#00AEFF]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/login">
+              Login
+            </NavLink>
+          </span>
+          <span className="hover:text-[#00AEFF]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/register">
+              Register
+            </NavLink>
+          </span>
+        </>
+      )}
+      {user && (
+        <>
+          {" "}
+          <span className="hover:text-[#00AEFF]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/user_profile">
+              User Profile
+            </NavLink>
+          </span>
+          <span className="hover:text-[#00AEFF]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/update_profile">
+              Update Profile
+            </NavLink>
+          </span>
+          <span className="hover:text-[#00AEFF]">
+            <NavLink className="px-4 py-2 rounded-lg" to="/blogs">
+              Blogs
+            </NavLink>
+          </span>
+        </>
+      )}
     </>
   );
 
@@ -83,24 +92,27 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        {user ? (
+        {loading ? (
+          <span className="loading loading-spinner loading-md"></span>
+        ) : user ? (
           <div className="flex items-center gap-1">
             <Link to="/user_profile">
               {" "}
               <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost btn-circle avatar"
+                className="tooltip tooltip-info tooltip-left"
+                data-tip={user.displayName && user.displayName}
               >
-                <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src={
-                      user.photoURL
-                        ? user.photoURL
-                        : "https://i.ibb.co/x3qtSTk/istockphoto-1300845620-612x612-2.jpg"
-                    }
-                  />
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full">
+                    <img
+                      alt="Tailwind CSS Navbar component"
+                      src={user.photoURL}
+                    />
+                  </div>
                 </div>
               </div>
             </Link>

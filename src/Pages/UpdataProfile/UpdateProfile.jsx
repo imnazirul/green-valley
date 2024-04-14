@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./toast.css";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile, setLoading } = useContext(AuthContext);
@@ -14,8 +13,6 @@ const UpdateProfile = () => {
 
     const name = e.target.name.value;
     const photoURL = e.target.photoURL.value;
-
-    console.log(name, photoURL);
 
     updateUserProfile(name, photoURL)
       .then(() => {
@@ -31,7 +28,7 @@ const UpdateProfile = () => {
 
   return (
     <>
-      <ToastContainer autoClose={3000}></ToastContainer>
+      <ToastContainer></ToastContainer>
       <div className="flex flex-col justify-center items-center space-y-6 pt-5 pb-16  bg-base-200 rounded-lg mb-5">
         <div className="text-center space-y-1 mb-10">
           <h2 className="text-3xl font-bold t mb-2 ">Update Profile</h2>
@@ -48,7 +45,7 @@ const UpdateProfile = () => {
             <p className="text-xl font-semibold">Email Address:</p>
 
             <p className="text-black text-lg">
-              {email}{" "}
+              {email ? email : "Not Found"}
               <span className="text-btn-1 ml-1">(Can Not be Edited)</span>
             </p>
           </div>

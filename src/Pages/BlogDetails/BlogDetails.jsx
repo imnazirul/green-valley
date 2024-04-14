@@ -4,6 +4,7 @@ import { IconContext } from "react-icons";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquarePinterest } from "react-icons/fa6";
+import { Helmet } from "react-helmet-async";
 
 const BlogDetails = () => {
   const blogData = useLoaderData();
@@ -17,6 +18,9 @@ const BlogDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Blog Details | Green Valley</title>
+      </Helmet>
       <h1 className="text-4xl font-jost underline text-darkBlue-1 text-center my-3">
         {title}
       </h1>

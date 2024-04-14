@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import "./leaflet.css";
 
 const LeafletMap = () => {
-  const position = [27.9517, -82.452606];
+  const position = [27.9504, -82.45558];
   return (
     <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
       <TileLayer
@@ -13,9 +13,7 @@ const LeafletMap = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
+        <Popup>620 E Twiggs St Tampa, FL, USA</Popup>
       </Marker>
     </MapContainer>
   );

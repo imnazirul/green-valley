@@ -36,7 +36,7 @@ const PropertyDetails = () => {
   return (
     <div className="mb-5 lg:mb-10">
       <Helmet>
-        <title>Details | Green Valley</title>
+        <title>Property Details | Green Valley</title>
       </Helmet>
       <div className="rounded-xl h-[500px] overflow-hidden mb-3">
         <img className=" h-full mx-auto rounded-xl " src={image} alt="" />

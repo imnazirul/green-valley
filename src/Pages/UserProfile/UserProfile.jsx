@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
   const { user } = useContext(AuthContext);
@@ -22,6 +23,9 @@ const UserProfile = () => {
   const { creationTime, lastSignInTime } = metadata;
   return (
     <div className=" mx-auto mb-5">
+      <Helmet>
+        <title>User Profile | Green Valley</title>
+      </Helmet>
       <div>
         <div className="bg-[#3B719799] relative shadow rounded-lg w-5/6 md:w-5/6  lg:w-full xl:w-full mx-auto">
           <div className="flex justify-center">
@@ -92,14 +96,14 @@ const UserProfile = () => {
                   </span>
                 </a>
 
-                <a className="w-full border-t border-gray-100 text-gray-600 py-4 pl-6 pr-3  block hover:bg-gray-100 transition duration-150">
+                <a className="w-full border-t border-gray-100 text-black py-4 pl-6 pr-3  block hover:bg-gray-100 transition duration-150 font-semibold">
                   <img
                     src="https://avatars0.githubusercontent.com/u/35900628?v=4"
                     alt=""
                     className="rounded-full h-6 shadow-md inline-block mr-2"
                   />
-                  Edited website settings
-                  <span className="text-gray-500 text-xs">1 day ago</span>
+                  Profile Image URL:{" "}
+                  <span className="text-black  "> {photoURL}</span>
                 </a>
               </div>
             </div>

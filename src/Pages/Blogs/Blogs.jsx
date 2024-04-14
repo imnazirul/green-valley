@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import BlogCard from "./BlogCard";
+import { Helmet } from "react-helmet-async";
 
 const Blogs = () => {
   const blogData = useLoaderData();
@@ -8,6 +9,9 @@ const Blogs = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Blogs | Green Valley</title>
+      </Helmet>
       <h1 className="text-4xl font-jost font-semibold text-[#0054A5] text-center underline mt-2 mb-4">
         Newest Blogs
       </h1>

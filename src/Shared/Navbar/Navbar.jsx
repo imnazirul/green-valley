@@ -92,9 +92,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        {loading ? (
-          <span className="loading loading-spinner loading-md"></span>
-        ) : user ? (
+        {user ? (
           <div className="flex items-center gap-1">
             <Link to="/user_profile">
               {" "}

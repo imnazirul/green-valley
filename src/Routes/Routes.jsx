@@ -32,7 +32,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/property_details/:id",
-        element: <PropertyDetails></PropertyDetails>,
+        element: (
+          <PrivateRoute>
+            <PropertyDetails></PropertyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/data.json"),
       },
       {

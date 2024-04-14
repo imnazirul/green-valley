@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile, setLoading } = useContext(AuthContext);
@@ -28,6 +29,9 @@ const UpdateProfile = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Update Profile | Green Valley</title>
+      </Helmet>
       <ToastContainer></ToastContainer>
       <div className="flex flex-col justify-center items-center space-y-6 pt-5 pb-16  bg-base-200 rounded-lg mb-5">
         <div className="text-center space-y-1 mb-10">
@@ -39,7 +43,7 @@ const UpdateProfile = () => {
 
         <form
           onSubmit={handleUpdateProfile}
-          className="flex flex-col space-y-4  max-w-2xl "
+          className="flex flex-col space-y-4  max-w-3xl "
         >
           <div className="flex gap-3 justify-between">
             <p className="text-xl font-semibold">Email Address:</p>

@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 import { useContext, useState } from "react";
@@ -9,6 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
+  const navigate = useNavigate();
   const { createUser, updateRegisterProfile, setReload, reload } =
     useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
@@ -37,8 +38,12 @@ const Register = () => {
         toast.success("Registration Completed.", {
           position: "top-center",
         });
+
+        navigate("/");
       })
-      .catch((err) => console.log(err.message));
+      .catch(() => {
+        toast.error("Email Already In Use");
+      });
   };
 
   return (

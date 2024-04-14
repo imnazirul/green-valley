@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useContext, useState } from "react";
@@ -15,6 +15,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { signIn, signInWithGoogle, signInWithGithub } =
     useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -30,7 +31,9 @@ const Login = () => {
     const { email, password } = formData;
 
     signIn(email, password)
-      .then((result) => console.log(result.user))
+      .then(() => {
+        navigate("/");
+      })
       .catch(() => {
         toast.error("Invalid Email or Password");
       });
@@ -38,7 +41,9 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
-      .then((result) => console.log(result.user))
+      .then(() => {
+        navigate("/");
+      })
       .catch(() => {
         toast.error("An Unknown Error Occurred!");
       });
@@ -46,8 +51,8 @@ const Login = () => {
 
   const handleGithubLogin = () => {
     signInWithGithub()
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        navigate("/");
       })
       .catch((err) => console.log(err));
   };
@@ -134,7 +139,7 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <div className="flex flex-col gap-2 justify-center  items-center mb-3">
+          <div className="flex flex-col gap-4 justify-center  items-center mb-3">
             {" "}
             <GoogleButton onClick={handleGoogleLogin} />
             <GithubButton onClick={handleGithubLogin} />

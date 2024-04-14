@@ -32,7 +32,12 @@ const Login = () => {
 
     signIn(email, password)
       .then(() => {
-        navigate("/");
+        toast.success("Sign In Successful", {
+          position: "top-center",
+        });
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       })
       .catch(() => {
         toast.error("Invalid Email or Password");
@@ -42,6 +47,9 @@ const Login = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then(() => {
+        toast.success("Sign In Successful", {
+          position: "top-center",
+        });
         navigate("/");
       })
       .catch(() => {
@@ -52,7 +60,12 @@ const Login = () => {
   const handleGithubLogin = () => {
     signInWithGithub()
       .then(() => {
-        navigate("/");
+        toast.success("Sign In Successful", {
+          position: "top-center",
+        });
+        setTimeout(() => {
+          navigate("/");
+        }, 500);
       })
       .catch((err) => console.log(err));
   };
@@ -62,7 +75,7 @@ const Login = () => {
       <Helmet>
         <title>Sign In | Green Valley</title>
       </Helmet>
-      <ToastContainer></ToastContainer>
+      <ToastContainer autoClose={1000}></ToastContainer>
       <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1">
         Login Now !
       </h1>

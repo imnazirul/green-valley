@@ -17,8 +17,8 @@
 - **Responsive Design**: Our website is optimized for various devices, including desktops, smartphones and ensuring a seamless experience regardless of the device used.
 
 ## NPM Package Used:
+
 - `AOS Package`
 - `React-leaflet`
 - `React Hook form`
-- `Swiper slider
-`
+- `Swiper slider`

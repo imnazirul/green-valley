@@ -29,7 +29,7 @@ const Register = () => {
     const { email, fullName, password, photoUrl } = formData;
 
     createUser(email, password)
-      .then((result) => {
+      .then(() => {
         updateRegisterProfile(fullName, photoUrl)
           .then(() => {
             setReload(!reload);
@@ -39,7 +39,9 @@ const Register = () => {
           position: "top-center",
         });
 
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
       })
       .catch(() => {
         toast.error("Email Already In Use");
@@ -52,7 +54,7 @@ const Register = () => {
         <title>Sign Up | Green Valley</title>
       </Helmet>
 
-      <ToastContainer></ToastContainer>
+      <ToastContainer autoClose={1000}></ToastContainer>
       <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1 ">
         Register Now !
       </h1>

@@ -4,15 +4,15 @@
 
 ## Features and Characteristics:
 
-- **User-friendly Interface**: Our website offers an intuitive and easy-to-navigate interface, making it simple for users to explore and find their favorite books.
+- **User-friendly Interface**: Our website offers an intuitive and easy-to-navigate interface, making it simple for users to explore and find their suitable home and property.
 
-- **Readlist and Wishlist**: Allow users to add their favorite books to readlist and create wishlists for future reading, enhancing their browsing experience.
+**Property Listings:** Browse through a vast selection of residential properties available for sale or rent.
 
-- **Advance Filter System**: Provide users with advanced filters, allowing them to narrow down their book based on criteria such as rating, publish date, and book pages.
+- **User Accounts:** Register an account to access personalized features such as Property Details, Blogs, Blog Details etc.
 
-- **Author Biography**: We boast a vast database of books across various Authors and their biography, ensuring that users can find and know about all book authors.
+- **Update Profile:** Users can update their profile information, including contact details, preferences, and notification settings.
 
-- **New Releases**: We always give update about new book releases so that our users can get the newest activity they want.
+- **Blogs:** Stay updated with the latest trends, tips, and insights in the residential real estate industry through our informative blog .
 
 - **Responsive Design**: Our website is optimized for various devices, including desktops, smartphones and ensuring a seamless experience regardless of the device used.
 

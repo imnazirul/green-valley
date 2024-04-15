@@ -1,21 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import GoogleButton from "react-google-button";
 import GithubButton from "react-github-login-button";
+import hotToast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { signIn, signInWithGoogle, signInWithGithub } =
+  const { signIn, signInWithGoogle, signInWithGithub, setLoading } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -32,42 +34,45 @@ const Login = () => {
 
     signIn(email, password)
       .then(() => {
-        toast.success("Sign In Successful", {
-          position: "top-center",
-        });
-        setTimeout(() => {
-          navigate("/");
-        }, 1500);
+        hotToast.success("Sign In Successful");
+
+        navigate(location?.state ? location.state : "/");
       })
-      .catch(() => {
-        toast.error("Invalid Email or Password");
+      .catch((err) => {
+        setLoading(false);
+        if (err.message === "Firebase: Error (auth/invalid-credential).") {
+          hotToast.error("Invalid Email Or Password");
+        } else {
+          hotToast.error("An Unknown Error Occurred");
+        }
       });
   };
 
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then(() => {
-        toast.success("Sign In Successful", {
-          position: "top-center",
-        });
+        hotToast.success("Sign In Successful");
+
         navigate("/");
       })
       .catch(() => {
-        toast.error("An Unknown Error Occurred!");
+        setLoading(false);
+        hotToast.error("An Unknown Error Occurred!");
       });
   };
 
   const handleGithubLogin = () => {
     signInWithGithub()
       .then(() => {
-        toast.success("Sign In Successful", {
-          position: "top-center",
-        });
-        setTimeout(() => {
-          navigate("/");
-        }, 500);
+        hotToast.success("Sign In Successful");
+
+        navigate("/");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+        hotToast.error("An Unknown Error Occurred!");
+      });
   };
 
   return (
@@ -75,7 +80,8 @@ const Login = () => {
       <Helmet>
         <title>Sign In | Green Valley</title>
       </Helmet>
-      <ToastContainer autoClose={1000}></ToastContainer>
+      <ToastContainer></ToastContainer>
+      <Toaster></Toaster>
       <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1">
         Login Now !
       </h1>

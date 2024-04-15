@@ -10,7 +10,7 @@ const Home = () => {
   const data = useLoaderData();
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Helmet>
         <title>Home | Green Valley</title>
       </Helmet>

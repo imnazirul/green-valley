@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet-async";
 const Blogs = () => {
   const blogData = useLoaderData();
 
-  console.log(blogData);
-
   return (
     <div>
       <Helmet>

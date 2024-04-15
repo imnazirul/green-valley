@@ -7,10 +7,11 @@ import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import hotToast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
   const navigate = useNavigate();
-  const { createUser, updateRegisterProfile, setReload, reload } =
+  const { createUser, updateRegisterProfile, setReload, reload, setLoading } =
     useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,15 +36,12 @@ const Register = () => {
             setReload(!reload);
           })
           .catch((err) => console.log(err));
-        toast.success("Registration Completed.", {
-          position: "top-center",
-        });
+        hotToast.success("Registration Successful.");
 
-        setTimeout(() => {
-          navigate("/");
-        }, 1500);
+        navigate("/");
       })
       .catch(() => {
+        setLoading(false);
         toast.error("Email Already In Use");
       });
   };
@@ -53,8 +51,9 @@ const Register = () => {
       <Helmet>
         <title>Sign Up | Green Valley</title>
       </Helmet>
+      <Toaster></Toaster>
 
-      <ToastContainer autoClose={1000}></ToastContainer>
+      <ToastContainer></ToastContainer>
       <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1 ">
         Register Now !
       </h1>

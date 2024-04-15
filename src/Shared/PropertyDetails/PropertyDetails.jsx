@@ -15,7 +15,7 @@ const PropertyDetails = () => {
   const idInt = parseInt(id);
 
   const AData = data.find((data) => data.id === idInt);
-  console.log(AData);
+
   const {
     area,
     contact_info,
@@ -31,7 +31,6 @@ const PropertyDetails = () => {
   } = AData;
 
   const { agent_contact, agent_name } = contact_info;
-  console.log(contact_info);
 
   return (
     <div className="mb-5 lg:mb-10">

@@ -3,15 +3,24 @@ import { FiLogIn } from "react-icons/fi";
 import "./Navbar.css";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import hotToast, { Toaster } from "react-hot-toast";
+
 const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
 
   const handleSignOut = () => {
-    logOut().then().catch();
+    logOut()
+      .then(
+        hotToast.success("Logout Successfully", {
+          position: "top-right",
+        })
+      )
+      .catch();
   };
 
   const navLinks = (
     <>
+      <Toaster></Toaster>
       <span className="hover:text-[#00AEFF] ">
         <NavLink className="px-4 py-2 rounded-lg" to="/">
           Home
@@ -45,13 +54,13 @@ const Navbar = () => {
               Update Profile
             </NavLink>
           </span>
-          <span className="hover:text-[#00AEFF]">
-            <NavLink className="px-4 py-2 rounded-lg" to="/blogs">
-              Blogs
-            </NavLink>
-          </span>
         </>
       )}
+      <span className="hover:text-[#00AEFF]">
+        <NavLink className="px-4 py-2 rounded-lg" to="/blogs">
+          Blogs
+        </NavLink>
+      </span>
     </>
   );
 
@@ -92,7 +101,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end">
-        {user ? (
+        {loading ? (
+          <>
+            <span className="loading loading-spinner loading-md"></span>
+          </>
+        ) : user ? (
           <div className="flex items-center gap-1">
             <Link to="/user_profile">
               {" "}

@@ -6,7 +6,7 @@ import Register from "../Pages/Register/Register";
 import PropertyDetails from "../Shared/PropertyDetails/PropertyDetails";
 import ErrorEl from "../Pages/ErrorEL/ErrorEl";
 import UserProfile from "../Pages/UserProfile/UserProfile";
-import UpdateProfile from "../Pages/UpdataProfile/UpdateProfile";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Blogs from "../Pages/Blogs/Blogs";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";

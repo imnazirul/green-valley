@@ -19,9 +19,11 @@ const PropertyCard = ({ data }) => {
   return (
     <div
       data-aos="fade-up"
-      className="flex  relative overflow-hidden card bg-base-100 shadow-xl border"
+      className={`${
+        data?.isHidden ? "md:hidden lg:flex" : "flex"
+      }  relative overflow-hidden card bg-base-100 shadow-xl border`}
     >
-      <figure className="h-[180px] lg:h-[300px]">
+      <figure className="h-[180px] md:h-[#250px] lg:h-[300px]">
         <img className="h-full w-full" src={image} alt="Shoes" />
       </figure>
       <p className="bg-[#00B1FF] rounded-3xl left-3 top-3 text-white text-lg font-bold font-roboto inline-block absolute px-4 py-2">

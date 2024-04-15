@@ -22,7 +22,7 @@ const Home = () => {
         <h1
           data-aos="zoom-out-right"
           data-aos-duration="500"
-          className="text-2xl lg:text-4xl text-center font-semibold font-jost"
+          className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-jost"
         >
           Featured Listed Property
         </h1>
@@ -32,7 +32,7 @@ const Home = () => {
           to be embraced.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6">
           {data.map((singleData, index) => (
             <PropertyCard key={index} data={singleData}></PropertyCard>
           ))}
@@ -45,7 +45,7 @@ const Home = () => {
 
       {/* Our Featured Agents */}
       <div className="mb-5 lg:mb-10">
-        <h1 className="text-2xl lg:text-4xl text-center font-semibold font-jost">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-jost">
           Our Featured Agents
         </h1>
         <p className="max-w-3xl text-lg text-center  mx-auto mt-3 mb-4">

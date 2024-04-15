@@ -90,3 +90,10 @@ const UpdateProfile = () => {
 };
 
 export default UpdateProfile;
+
+{
+  /* <div className="flex min-h-screen justify-center ite'">
+<span className="loading loading-dots loading-lg"></span>
+<span className="loading loading-dots loading-lg"></span>
+</div> */
+}

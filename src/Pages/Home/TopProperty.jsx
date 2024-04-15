@@ -8,7 +8,7 @@ AOS.init();
 const TopProperty = () => {
   return (
     <div>
-      <h1 className="text-2xl lg:text-4xl text-center font-semibold font-jost">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-jost">
         Top Property Places
       </h1>
       <p className="max-w-3xl text-lg text-center  mx-auto mt-3 mb-4">
@@ -17,11 +17,11 @@ const TopProperty = () => {
         await!
       </p>
 
-      <div className="grid grid-cols-2 lg:grid-cols-6 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5">
         {/* one */}
         <div
           data-aos="fade-right"
-          className="col-span-2 relative rounded-xl overflow-hidden"
+          className="lg:col-span-2 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-6.png"
@@ -44,7 +44,7 @@ const TopProperty = () => {
         </div>
         <div
           data-aos="fade-up"
-          className="col-span-2 relative rounded-xl overflow-hidden"
+          className="lg:col-span-2 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-7.png"
@@ -67,7 +67,7 @@ const TopProperty = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="col-span-2 relative rounded-xl overflow-hidden"
+          className="md:col-span-2 lg:col-span-2 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-3.png"
@@ -88,7 +88,7 @@ const TopProperty = () => {
         </div>
         <div
           data-aos="fade-right"
-          className="col-span-3 relative rounded-xl overflow-hidden"
+          className="lg:col-span-3 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-4.png"
@@ -111,7 +111,7 @@ const TopProperty = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="col-span-2 lg:col-span-3 relative rounded-xl overflow-hidden"
+          className=" lg:col-span-3 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-5.png"

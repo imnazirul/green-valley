@@ -48,6 +48,14 @@ function Reviews() {
         },
       },
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,

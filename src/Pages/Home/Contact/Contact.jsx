@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <div className="mb-5 lg:mb-10">
       <ToastContainer></ToastContainer>
-      <h1 className="text-2xl lg:text-4xl text-center font-semibold font-jost">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-semibold font-jost">
         Get Helps & Friendly Support
       </h1>
       <p className="max-w-3xl text-lg text-center  mx-auto mt-3 mb-4">

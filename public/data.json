@@ -147,6 +147,7 @@
     "location": "Beverly Hills, California",
     "facilities": ["private elevator", "infinity pool", "home automation"],
     "image": "https://i.ibb.co/vX0RpS6/ing-9.jpg",
+    "isHidden": true,
     "contact_info": {
       "agent_name": "James Smith",
       "agent_contact": "+1 (310) 456-7890"

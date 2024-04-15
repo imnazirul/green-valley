@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start flex  items-center">
+      <div className="navbar-start flex md:gap-2  items-center">
         <div className="dropdown z-20">
           <div tabIndex={0} role="button" className=" btn-ghost lg:hidden">
             <svg
@@ -83,14 +83,14 @@ const Navbar = () => {
           </div>
           <div
             tabIndex={0}
-            className="menu menu-sm gap-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border border-btn-1 py-5"
+            className="menu menu-sm gap-4 dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 border border-btn-1 py-5 md:text-xl md:py-7 "
           >
             {navLinks}
           </div>
         </div>
         <Link
           to="/"
-          className="text-xl btn-ghost font-jost flex gap-0 lg:text-3xl font-bold text-[#0054A5]"
+          className="text-xl md:text-2xl btn-ghost font-jost flex gap-0 lg:text-3xl font-bold text-[#0054A5]"
         >
           Green Valley
         </Link>

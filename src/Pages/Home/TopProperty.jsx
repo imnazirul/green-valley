@@ -8,16 +8,16 @@ AOS.init();
 const TopProperty = () => {
   return (
     <div>
-      <h1 className="text-4xl text-center font-semibold font-jost">
+      <h1 className="text-2xl lg:text-4xl text-center font-semibold font-jost">
         Top Property Places
       </h1>
       <p className="max-w-3xl text-lg text-center  mx-auto mt-3 mb-4">
         From vibrant city life in New York City to serene beaches in Maldives,
-        top property places offer diverse experiences. Explore luxury living in
-        Dubai or historic charm in Paris. Endless possibilities await!
+        top property places offer diverse experiences. Endless possibilities
+        await!
       </p>
 
-      <div className="grid grid-cols-6 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-6 gap-5">
         {/* one */}
         <div
           data-aos="fade-right"
@@ -111,7 +111,7 @@ const TopProperty = () => {
         </div>
         <div
           data-aos="fade-left"
-          className="col-span-3 relative rounded-xl overflow-hidden"
+          className="col-span-2 lg:col-span-3 relative rounded-xl overflow-hidden"
         >
           <img
             src="https://rhoomy.smartdemowp.com/wp-content/uploads/city-5.png"

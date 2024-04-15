@@ -6,7 +6,7 @@
 
 - **User-friendly Interface**: Our website offers an intuitive and easy-to-navigate interface, making it simple for users to explore and find their suitable home and property.
 
-**Property Listings:** Browse through a vast selection of residential properties available for sale or rent.
+- **Property Listings:** Browse through a vast selection of residential properties available for sale or rent.
 
 - **User Accounts:** Register an account to access personalized features such as Property Details, Blogs, Blog Details etc.
 

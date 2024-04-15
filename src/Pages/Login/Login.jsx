@@ -76,17 +76,17 @@ const Login = () => {
   };
 
   return (
-    <div className="mb-5 lg:mb-10 bg-base-200 rounded-xl ">
+    <div className="mb-5 lg:mb-10 lg:bg-base-200 rounded-xl ">
       <Helmet>
         <title>Sign In | Green Valley</title>
       </Helmet>
       <ToastContainer></ToastContainer>
       <Toaster></Toaster>
-      <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1">
+      <h1 className="text-3xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1">
         Login Now !
       </h1>
-      <div className="hero py-10 ">
-        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+      <div className="hero py-5 lg:py-10 ">
+        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100 border">
           <form onSubmit={handleSubmit(handleLogin)} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -158,14 +158,14 @@ const Login = () => {
               </button>
             </div>
           </form>
-          <div className="flex flex-col gap-4 justify-center  items-center mb-3">
+          <div className="flex flex-col gap-4 justify-center  items-center mb-5">
             {" "}
             <GoogleButton onClick={handleGoogleLogin} />
             <GithubButton onClick={handleGithubLogin} />
           </div>
           <p className="text-center mb-4 text-lg">
             Don't have any account?{" "}
-            <Link to="/register" className="link text-btn-1">
+            <Link to="/register" className="link text-btn-1 pb-2">
               Sign Up
             </Link>
           </p>

@@ -37,16 +37,16 @@ const PropertyDetails = () => {
       <Helmet>
         <title>Property Details | Green Valley</title>
       </Helmet>
-      <div className="rounded-xl h-[500px] overflow-hidden mb-3">
+      <div className="rounded-xl lg:h-[500px] overflow-hidden mb-3">
         <img className=" h-full mx-auto rounded-xl " src={image} alt="" />
       </div>
       <div className="space-y-5">
         {" "}
         <div className="flex justify-between mb-4">
-          <p className="text-2xl text-blue-700 font-bold px-2 py-1 rounded-3xl bg-blue-200">
+          <p className=" lg:text-xl text-blue-700 font-bold px-2 py-1 rounded-3xl bg-blue-200">
             For {status}
           </p>{" "}
-          <div className="flex text-2xl gap-4">
+          <div className="flex text-xl lg:text-2xl gap-4">
             <FaPenToSquare></FaPenToSquare>
             <FaMapLocationDot></FaMapLocationDot>
             <MdScreenShare></MdScreenShare>
@@ -55,15 +55,19 @@ const PropertyDetails = () => {
           </div>
         </div>
         <hr />
-        <div className="flex justify-between space-y-3">
+        <div className="flex flex-col lg:flex-row justify-between space-y-3">
           <div className="space-y-2">
-            <h3 className="text-2xl font-jost text-black">{price}</h3>
-            <h1 className="text-3xl font-jost text-black">{estate_title}</h1>
-            <p className="text-xl font-roboto">{location}</p>
+            <h3 className="text-xl lg:text-2xl font-jost text-black">
+              {price}
+            </h3>
+            <h1 className="text-2xl lg:text-3xl font-jost text-black">
+              {estate_title}
+            </h1>
+            <p className="lg:text-xl font-roboto">{location}</p>
           </div>
 
           <div className="space-y-2">
-            <h1 className="text-2xl font-semibold text-[#3B7197]">
+            <h1 className="text-xl lg:text-2xl font-semibold text-[#3B7197]">
               Owner Info
             </h1>
             <div className="font-roboto font-semibold ">
@@ -79,25 +83,27 @@ const PropertyDetails = () => {
         </div>
         <hr />
         <div>
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col lg:flex-row gap-2 justify-between lg:items-center">
             {" "}
-            <h3 className="text-[#1a90be] text-xl bg-[#1a90be1A] inline-block px-3 py-1 font-semibold rounded-3xl mt-2">
+            <h3 className="text-[#1a90be] lg:text-xl bg-[#1a90be1A] inline-block px-3 py-1 font-semibold rounded-3xl mt-2">
               {segment_name}
             </h3>
-            <p className="text-xl text-black font-bold bg-gray-200 flex gap-1 items-center px-3 py-1 rounded-3xl">
+            <p className="lg:text-xl text-black font-bold bg-gray-200 flex gap-1 items-center px-3 py-1 rounded-3xl">
               <MdAreaChart></MdAreaChart>
               {area}
             </p>
           </div>
-          <p className="text-2xl mt-2 text-[#0e3857]">{description}</p>
+          <p className="text-xl lg:text-2xl mt-2 text-[#0e3857]">
+            {description}
+          </p>
         </div>
         <div>
-          <h3 className="text-2xl font-jost text-white bg-[#3B7197]  bg-inline-block px-3 py-1 rounded-3xl">
+          <h3 className="text-xl lg:text-2xl font-jost text-white bg-[#3B7197]  bg-inline-block px-3 py-1 rounded-3xl">
             Facilities:
           </h3>
           <ul className="list-disc list-inside">
             {facilities.map((text, index) => (
-              <li className="text-lg uppercase" key={index}>
+              <li className="lg:text-lg uppercase" key={index}>
                 {text}
               </li>
             ))}
@@ -105,7 +111,7 @@ const PropertyDetails = () => {
         </div>
         <hr />
         <div>
-          <p className="text-xl">
+          <p className="text-lg lg:text-xl">
             <span className="text-[#3B7197] font-semibold">More Details: </span>
             {long_description}
           </p>

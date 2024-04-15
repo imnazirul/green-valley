@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const PropertyCard = ({ data }) => {
-  // console.log(data);
   const {
     status,
     segment_name,
@@ -22,14 +21,14 @@ const PropertyCard = ({ data }) => {
       data-aos="fade-up"
       className="flex  relative overflow-hidden card bg-base-100 shadow-xl border"
     >
-      <figure className="h-[300px]">
+      <figure className="h-[180px] lg:h-[300px]">
         <img className="h-full w-full" src={image} alt="Shoes" />
       </figure>
       <p className="bg-[#00B1FF] rounded-3xl left-3 top-3 text-white text-lg font-bold font-roboto inline-block absolute px-4 py-2">
         For {status}
       </p>
-      <div className="p-4 space-y-4 flex flex-col justify-between h-full  ">
-        <p className="flex justify-between">
+      <div className="p-4 space-y-2 lg:space-y-4 flex flex-col justify-between lg:h-full  ">
+        <p className="flex flex-col lg:flex-row gap-2 lg:gap-0 justify-between">
           <span className="text-[#1a90be] bg-[#1a90be1A] inline-block px-3 py-1 font-semibold rounded-3xl">
             {segment_name}
           </span>{" "}

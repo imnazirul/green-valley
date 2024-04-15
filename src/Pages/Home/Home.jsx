@@ -14,22 +14,25 @@ const Home = () => {
       <Helmet>
         <title>Home | Green Valley</title>
       </Helmet>
-      <Carousel></Carousel>
+      <div className="rounded-xl  overflow-hidden">
+        {" "}
+        <Carousel></Carousel>
+      </div>
       <div className="mt-5 lg:mt-10 mb-5 lg:mb-10">
         <h1
           data-aos="zoom-out-right"
           data-aos-duration="500"
-          className="text-4xl text-center font-semibold font-jost"
+          className="text-2xl lg:text-4xl text-center font-semibold font-jost"
         >
           Featured Listed Property
         </h1>
         <p className="text-lg text-center max-w-3xl mx-auto mt-3 mb-4">
           Discover our featured listed property, boasting exquisite design,
-          premium amenities, and unparalleled location. Its more than a home;
-          its a lifestyle waiting to be embraced.
+          premium amenities, and unparalleled location. its a lifestyle waiting
+          to be embraced.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-6">
           {data.map((singleData, index) => (
             <PropertyCard key={index} data={singleData}></PropertyCard>
           ))}
@@ -42,20 +45,20 @@ const Home = () => {
 
       {/* Our Featured Agents */}
       <div className="mb-5 lg:mb-10">
-        <h1 className="text-4xl text-center font-semibold font-jost">
+        <h1 className="text-2xl lg:text-4xl text-center font-semibold font-jost">
           Our Featured Agents
         </h1>
         <p className="max-w-3xl text-lg text-center  mx-auto mt-3 mb-4">
-          Meet our accomplished featured agents, experts in their respective
-          markets. With a keen eye for detail and dedication, they are ready to
-          guide you through your real estate journey with confidence.
+          Meet our accomplished featured agents. With a keen eye for detail and
+          dedication, they are ready to guide you through your real estate
+          journey with confidence.
         </p>
         <div>
           <Reviews></Reviews>
         </div>
       </div>
 
-      <div className="mt-20 lg:mb-10">
+      <div className="mt-16 lg:mb-10">
         <Contact></Contact>
       </div>
     </div>

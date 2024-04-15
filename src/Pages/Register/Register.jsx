@@ -47,18 +47,18 @@ const Register = () => {
   };
 
   return (
-    <div className="mb-5 lg:mb-10 bg-base-200 rounded-xl">
+    <div className="mb-5 lg:mb-10 lg:bg-base-200 rounded-xl">
       <Helmet>
         <title>Sign Up | Green Valley</title>
       </Helmet>
       <Toaster></Toaster>
 
       <ToastContainer></ToastContainer>
-      <h1 className="text-5xl font-jost font-bold text-center pt-10 text-btn-1 ">
+      <h1 className="text-3xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1 ">
         Register Now !
       </h1>
-      <div className="hero py-10 ">
-        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+      <div className="hero py-5 lg:py-10 ">
+        <div className="card shrink-0 w-full max-w-md shadow-2xl bg-base-100 border">
           <form onSubmit={handleSubmit(handleRegister)} className="card-body">
             <div className="form-control">
               <label className="label">

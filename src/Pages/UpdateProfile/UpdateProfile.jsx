@@ -43,9 +43,9 @@ const UpdateProfile = () => {
 
         <form
           onSubmit={handleUpdateProfile}
-          className="flex flex-col space-y-4  max-w-3xl "
+          className="flex flex-col p-3 space-y-4  max-w-3xl "
         >
-          <div className="flex gap-3 justify-between">
+          <div className="flex flex-col lg:flex-row lg:gap-3 justify-between">
             <p className="text-xl font-semibold">Email Address:</p>
 
             <p className="text-black text-lg">
@@ -54,7 +54,7 @@ const UpdateProfile = () => {
             </p>
           </div>
           <hr />
-          <div className="flex gap-3 items-center justify-between">
+          <div className="flex flex-col lg:flex-row lg:gap-3 lg:items-center lg:justify-between">
             <p className="text-xl font-semibold">Profile Name:</p>
             <input
               className="border-2 px-3 py-1 rounded-lg flex-1"
@@ -65,7 +65,7 @@ const UpdateProfile = () => {
             />
           </div>
           <hr />
-          <div className="flex gap-3 items-center justify-between">
+          <div className="flex flex-col lg:flex-row lg:gap-3 lg:items-center lg:justify-between">
             <p className="text-xl font-semibold">Profile Image URL:</p>
 
             <input
@@ -78,7 +78,7 @@ const UpdateProfile = () => {
           </div>
           <hr />
 
-          <div className="pt-3 text-right">
+          <div className="pt-3 lg:text-right">
             <button className="btn  bg-btn-1 text-white text-lg font-semibold hover:bg-btn-1 ">
               Save Changes
             </button>

@@ -21,62 +21,70 @@ const BlogDetails = () => {
       <Helmet>
         <title>Blog Details | Green Valley</title>
       </Helmet>
-      <h1 className="text-4xl font-jost underline text-darkBlue-1 text-center my-3">
+      <h1 className="text-xl lg:text-4xl font-jost underline text-darkBlue-1 text-center my-3">
         {title}
       </h1>
-      <div className="h-[500px]">
+      <div className="lg:h-[500px] rounded-lg overflow-hidden">
         <img className="h-full w-full" src={image} alt="" />
       </div>
-      <div className="social font-jost text-2xl flex justify-center gap-5 my-2">
-        <a className="flex gap-1 items-center cursor-pointer">
+      <div className="social font-jost text-lg lg:text-2xl grid grid-cols-2 lg:grid-cols-4 justify-between  lg:gap-5 my-2">
+        <a className="flex  gap-1 items-center cursor-pointer">
           {" "}
           <IconContext.Provider value={{ color: "red" }}>
             <TiSocialYoutube></TiSocialYoutube>
           </IconContext.Provider>{" "}
-          <p className="text-xl">Youtube</p>
+          <p className="lg:text-xl">Youtube</p>
         </a>
         <a className="flex gap-1 items-center cursor-pointer">
           {" "}
           <IconContext.Provider value={{ color: "blue" }}>
             <FaFacebookSquare></FaFacebookSquare>
           </IconContext.Provider>{" "}
-          <p className="text-xl">Facebook</p>
+          <p className="lg:text-xl">Facebook</p>
         </a>
         <a className="flex gap-1 items-center cursor-pointer">
           <FaSquareXTwitter></FaSquareXTwitter>
-          <p className="text-xl">Twitter/X</p>
+          <p className="lg:text-xl">Twitter/X</p>
         </a>
         <a className="flex gap-1 items-center cursor-pointer">
           {" "}
           <IconContext.Provider value={{ color: "red" }}>
             <FaSquarePinterest></FaSquarePinterest>
           </IconContext.Provider>{" "}
-          <p className="text-xl">Pinterest</p>
+          <p className="lg:text-xl">Pinterest</p>
         </a>
       </div>
 
       <div>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-xl text-btn-1 font-bold ">Author: </span>
+          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold ">
+            Author:{" "}
+          </span>
           {author}
         </p>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-xl text-btn-1 font-bold ">Publish Date: </span>
+          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold  ">
+            Publish Date:{" "}
+          </span>
           {date}
         </p>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-xl text-btn-1 font-bold ">Category: </span>
+          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold ">
+            Category:{" "}
+          </span>
           {category}
         </p>
       </div>
       <hr className="my-4" />
       <div>
-        <p className="text-xl">{description}</p>
+        <p className="text-lg lg:text-xl">{description}</p>
 
         <hr className="my-4" />
-        <h1 className="text-2xl text-btn-1 font-bold my-2">{title}:</h1>
+        <h1 className="text-xl lg:text-2xl text-btn-1 font-bold my-2">
+          {title}:
+        </h1>
 
-        <p className="text-lg mb-5">{content}</p>
+        <p className="lg:text-lg mb-5">{content}</p>
       </div>
     </div>
   );

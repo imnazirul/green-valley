@@ -54,7 +54,7 @@ const Register = () => {
       <Toaster></Toaster>
 
       <ToastContainer></ToastContainer>
-      <h1 className="text-3xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1 ">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1 ">
         Register Now !
       </h1>
       <div className="hero py-5 lg:py-10 ">
@@ -204,7 +204,7 @@ const Register = () => {
               </button>
             </div>
           </form>
-          <p className="text-center mb-4 text-lg">
+          <p className="text-center pb-5 text-lg">
             Already have an account? Please{" "}
             <Link to="/login" className="link text-btn-1">
               Sign In

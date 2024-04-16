@@ -34,7 +34,7 @@ const UpdateProfile = () => {
       </Helmet>
       <ToastContainer></ToastContainer>
       <div className="flex flex-col justify-center items-center space-y-6 pt-5 pb-16  bg-base-200 rounded-lg mb-5">
-        <div className="text-center space-y-1 mb-10">
+        <div className="text-center space-y-1  lg:mb-10 p-3">
           <h2 className="text-3xl font-bold t mb-2 ">Update Profile</h2>
           <p className="text-lg font-semibold font-jost ">
             Update your account information and set other preferences.
@@ -90,10 +90,3 @@ const UpdateProfile = () => {
 };
 
 export default UpdateProfile;
-
-{
-  /* <div className="flex min-h-screen justify-center ite'">
-<span className="loading loading-dots loading-lg"></span>
-<span className="loading loading-dots loading-lg"></span>
-</div> */
-}

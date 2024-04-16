@@ -21,13 +21,13 @@ const BlogDetails = () => {
       <Helmet>
         <title>Blog Details | Green Valley</title>
       </Helmet>
-      <h1 className="text-xl lg:text-4xl font-jost underline text-darkBlue-1 text-center my-3">
+      <h1 className="text-xl md:text-3xl lg:text-4xl font-jost underline text-darkBlue-1 text-center my-3">
         {title}
       </h1>
       <div className="lg:h-[500px] rounded-lg overflow-hidden">
         <img className="h-full w-full" src={image} alt="" />
       </div>
-      <div className="social font-jost text-lg lg:text-2xl grid grid-cols-2 lg:grid-cols-4 justify-between  lg:gap-5 my-2">
+      <div className="social font-jost text-lg md:text-2xl grid grid-cols-2 md:grid-cols-4 justify-between  lg:gap-5 my-2">
         <a className="flex  gap-1 items-center cursor-pointer">
           {" "}
           <IconContext.Provider value={{ color: "red" }}>
@@ -57,19 +57,19 @@ const BlogDetails = () => {
 
       <div>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold ">
+          <span className="text-lg  md:text-xl text-btn-1 lg:font-bold ">
             Author:{" "}
           </span>
           {author}
         </p>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold  ">
+          <span className="text-lg md:text-xl text-btn-1 lg:font-bold  ">
             Publish Date:{" "}
           </span>
           {date}
         </p>
         <p className="font-jost text-lg font-semibold">
-          <span className="text-lg lg:text-xl text-btn-1 lg:font-bold ">
+          <span className="text-lg md:text-xl text-btn-1 lg:font-bold ">
             Category:{" "}
           </span>
           {category}
@@ -77,14 +77,14 @@ const BlogDetails = () => {
       </div>
       <hr className="my-4" />
       <div>
-        <p className="text-lg lg:text-xl">{description}</p>
+        <p className="text-lg md:text-xl">{description}</p>
 
         <hr className="my-4" />
-        <h1 className="text-xl lg:text-2xl text-btn-1 font-bold my-2">
+        <h1 className="text-xl md:text-2xl text-btn-1 font-bold my-2">
           {title}:
         </h1>
 
-        <p className="lg:text-lg mb-5">{content}</p>
+        <p className="md:text-lg mb-5">{content}</p>
       </div>
     </div>
   );

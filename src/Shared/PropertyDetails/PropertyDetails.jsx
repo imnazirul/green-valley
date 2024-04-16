@@ -43,10 +43,10 @@ const PropertyDetails = () => {
       <div className="space-y-5">
         {" "}
         <div className="flex justify-between mb-4">
-          <p className=" lg:text-xl text-blue-700 font-bold px-2 py-1 rounded-3xl bg-blue-200">
+          <p className="md:text-xl text-blue-700 font-bold px-2 py-1 rounded-3xl bg-blue-200">
             For {status}
           </p>{" "}
-          <div className="flex text-xl lg:text-2xl gap-4">
+          <div className="flex text-xl md:text-2xl gap-4">
             <FaPenToSquare></FaPenToSquare>
             <FaMapLocationDot></FaMapLocationDot>
             <MdScreenShare></MdScreenShare>

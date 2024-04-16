@@ -82,7 +82,7 @@ const Login = () => {
       </Helmet>
       <ToastContainer></ToastContainer>
       <Toaster></Toaster>
-      <h1 className="text-3xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-jost font-bold text-center pt-5 lg:pt-10 text-btn-1">
         Login Now !
       </h1>
       <div className="hero py-5 lg:py-10 ">

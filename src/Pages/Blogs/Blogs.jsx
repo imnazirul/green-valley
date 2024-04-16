@@ -6,7 +6,7 @@ const Blogs = () => {
   const blogData = useLoaderData();
 
   return (
-    <div>
+    <div className="mb-5 lg:mb-10">
       <Helmet>
         <title>Blogs | Green Valley</title>
       </Helmet>

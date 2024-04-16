@@ -1,6 +1,6 @@
 # Green Valley
 
-**Live Site URL:** [www.greenvalley.com](https://nazirul-assignment8.netlify.app)
+**Live Site URL:** [www.greenvalley.com](https://real-estate-09.web.app/)
 
 ## Features and Characteristics:
 

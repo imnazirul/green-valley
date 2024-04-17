@@ -35,7 +35,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Agencies
@@ -44,7 +43,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Agent
@@ -53,7 +51,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Testimonial
@@ -62,7 +59,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Affiliate
@@ -78,7 +74,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   About Us
@@ -87,7 +82,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Contact
@@ -96,7 +90,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Real Estate
@@ -105,7 +98,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Property
@@ -121,7 +113,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Terms of Use
@@ -130,7 +121,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Privacy Policy
@@ -139,7 +129,6 @@ const Footer = () => {
               <li>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
                   className="hover:underline font-medium"
                 >
                   Cookie Preferences

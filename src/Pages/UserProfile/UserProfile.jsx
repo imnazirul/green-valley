@@ -57,7 +57,7 @@ const UserProfile = () => {
                 <span className="font-bold">Edit Profile</span>
               </Link>
             </div>
-            <div className="flex flex-col lg:flex-row max-sm:gap-2 justify-between items-center my-5 px-6 text-lg font-semibold">
+            <div className="flex flex-col lg:flex-row max-sm:gap-2 justify-between items-center my-5 px-6 md:text-lg font-semibold">
               <div>
                 <p>Account Created: {creationTime}</p>
               </div>

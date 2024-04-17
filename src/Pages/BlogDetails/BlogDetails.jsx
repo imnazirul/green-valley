@@ -14,8 +14,6 @@ const BlogDetails = () => {
 
   const { author, category, content, date, description, image, title } = blog;
 
-  console.log(blog);
-
   return (
     <div>
       <Helmet>

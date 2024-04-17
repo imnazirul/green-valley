@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile, setLoading } = useContext(AuthContext);
@@ -32,7 +31,7 @@ const UpdateProfile = () => {
       <Helmet>
         <title>Update Profile | Green Valley</title>
       </Helmet>
-      <ToastContainer></ToastContainer>
+
       <div className="flex flex-col justify-center items-center space-y-6 pt-5 pb-16  bg-base-200 rounded-lg mb-5">
         <div className="text-center space-y-1  lg:mb-10 p-3">
           <h2 className="text-3xl font-bold t mb-2 ">Update Profile</h2>
